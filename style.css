@@ -1,0 +1,249 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background-color: #4a4a4a;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+nav ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h1, h2, h3 {
+    color: #2c3e50;
+}
+
+.projeto {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+    nav ul {
+        text-align: center; /* Centraliza os links no menu */
+        margin-bottom: 20px; /* Espaço abaixo do menu */
+    }
+
+    nav ul li {
+        display: block; /* Coloca os itens do menu em coluna */
+        margin-bottom: 10px; /* Espaçamento entre os itens */
+    }
+
+    .projeto {
+        padding: 10px; /* Reduz o preenchimento dos projetos */
+        margin-bottom: 10px; /* Reduz o espaço entre os projetos */
+    }
+}
+
+/* Estilos para telas menores */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px; /* Tamanho da fonte do título principal */
+    }
+
+    h2 {
+        font-size: 20px; /* Tamanho da fonte dos subtítulos */
+    }
+
+    p, li {
+        font-size: 16px; /* Tamanho da fonte dos parágrafos e listas */
+    }
+}
+
+/* estilização da parte de projetos */
+
+/* Estilos para a página Projetos */
+#projetos h1 {
+    text-align: center;
+    color: #2c3e50;
+}
+
+.projeto {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 20px auto;
+    max-width: 800px; /* Limita a largura dos projetos */
+}
+
+.projeto h2 {
+    color: #34495e;
+}
+
+.projeto p {
+    line-height: 1.6;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #projetos h1 {
+        font-size: 24px;
+    }
+
+    .projeto {
+        padding: 10px; /* Reduz o preenchimento dos projetos */
+        margin-bottom: 15px; /* Reduz o espaço entre os projetos */
+    }
+
+    .projeto h2 {
+        font-size: 20px; /* Tamanho da fonte dos títulos dos projetos */
+    }
+
+    .projeto p {
+        font-size: 16px; /* Tamanho da fonte dos parágrafos */
+    }
+}
+
+/* Estilos para a página de Contato */
+#contato {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#contato h1 {
+    text-align: center;
+    color: #2c3e50;
+}
+
+.contact-info, .social-media, .contact-form {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.contact-info h2, .social-media h2, .contact-form h2 {
+    color: #34495e;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 5px;
+}
+
+.social-media ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.social-media li {
+    margin: 10px 0;
+}
+
+.social-media a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.social-media a:hover {
+    text-decoration: underline;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.form-group textarea {
+    height: 100px;
+}
+
+button[type="submit"] {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button[type="submit"]:hover {
+    background-color: #2980b9;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #contato {
+        padding: 10px;
+    }
+
+    #contato h1 {
+        font-size: 24px;
+    }
+
+    .contact-info h2, .social-media h2, .contact-form h2 {
+        font-size: 20px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 16px;
+    }
+}
+
+/* parte do java Script */
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
