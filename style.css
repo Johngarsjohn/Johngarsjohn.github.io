@@ -1,11 +1,18 @@
+/* === ESTILO GLOBAL === */
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
     color: #333;
+    background-color: #fff;
 }
 
+/* === CABEÇALHO E NAVEGAÇÃO === */
 header {
     background-color: #4a4a4a;
     color: #fff;
@@ -14,19 +21,26 @@ header {
 
 nav ul {
     padding: 0;
-    list-style-type: none;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 10px;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
+    font-weight: bold;
 }
 
+nav ul li a:hover,
+nav ul li a[aria-current="page"] {
+    text-decoration: underline;
+}
+
+/* === CONTEÚDO PRINCIPAL === */
 main {
     padding: 20px;
 }
@@ -37,15 +51,10 @@ section {
 
 h1, h2, h3 {
     color: #2c3e50;
+    margin-top: 0;
 }
 
-.projeto {
-    background-color: #f4f4f4;
-    border: 1px solid #ddd;
-    padding: 15px;
-    margin-bottom: 15px;
-}
-
+/* === RODAPÉ === */
 footer {
     background-color: #333;
     color: #fff;
@@ -53,45 +62,9 @@ footer {
     padding: 10px 0;
 }
 
-/* Estilos para dispositivos móveis */
-@media (max-width: 768px) {
-    nav ul {
-        text-align: center; /* Centraliza os links no menu */
-        margin-bottom: 20px; /* Espaço abaixo do menu */
-    }
-
-    nav ul li {
-        display: block; /* Coloca os itens do menu em coluna */
-        margin-bottom: 10px; /* Espaçamento entre os itens */
-    }
-
-    .projeto {
-        padding: 10px; /* Reduz o preenchimento dos projetos */
-        margin-bottom: 10px; /* Reduz o espaço entre os projetos */
-    }
-}
-
-/* Estilos para telas menores */
-@media (max-width: 480px) {
-    h1 {
-        font-size: 24px; /* Tamanho da fonte do título principal */
-    }
-
-    h2 {
-        font-size: 20px; /* Tamanho da fonte dos subtítulos */
-    }
-
-    p, li {
-        font-size: 16px; /* Tamanho da fonte dos parágrafos e listas */
-    }
-}
-
-/* estilização da parte de projetos */
-
-/* Estilos para a página Projetos */
+/* === PROJETOS === */
 #projetos h1 {
     text-align: center;
-    color: #2c3e50;
 }
 
 .projeto {
@@ -99,7 +72,7 @@ footer {
     border: 1px solid #ddd;
     padding: 15px;
     margin: 20px auto;
-    max-width: 800px; /* Limita a largura dos projetos */
+    max-width: 800px;
 }
 
 .projeto h2 {
@@ -110,27 +83,7 @@ footer {
     line-height: 1.6;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    #projetos h1 {
-        font-size: 24px;
-    }
-
-    .projeto {
-        padding: 10px; /* Reduz o preenchimento dos projetos */
-        margin-bottom: 15px; /* Reduz o espaço entre os projetos */
-    }
-
-    .projeto h2 {
-        font-size: 20px; /* Tamanho da fonte dos títulos dos projetos */
-    }
-
-    .projeto p {
-        font-size: 16px; /* Tamanho da fonte dos parágrafos */
-    }
-}
-
-/* Estilos para a página de Contato */
+/* === CONTATO === */
 #contato {
     max-width: 800px;
     margin: 0 auto;
@@ -139,17 +92,20 @@ footer {
 
 #contato h1 {
     text-align: center;
-    color: #2c3e50;
 }
 
-.contact-info, .social-media, .contact-form {
+.contact-info,
+.social-media,
+.contact-form {
     background-color: #f4f4f4;
     border: 1px solid #ddd;
     padding: 15px;
     margin-bottom: 20px;
 }
 
-.contact-info h2, .social-media h2, .contact-form h2 {
+.contact-info h2,
+.social-media h2,
+.contact-form h2 {
     color: #34495e;
     border-bottom: 2px solid #3498db;
     padding-bottom: 5px;
@@ -185,6 +141,7 @@ footer {
 .form-group label {
     display: block;
     margin-bottom: 5px;
+    font-weight: 600;
 }
 
 .form-group input,
@@ -193,6 +150,7 @@ footer {
     padding: 8px;
     border: 1px solid #ddd;
     border-radius: 4px;
+    font-size: 1rem;
 }
 
 .form-group textarea {
@@ -207,23 +165,105 @@ button[type="submit"] {
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
+    transition: background-color 0.3s ease;
 }
 
 button[type="submit"]:hover {
     background-color: #2980b9;
 }
 
-/* Responsividade */
+/* === HABILIDADES === */
+.skills-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.skill-category {
+    margin-bottom: 2rem;
+}
+
+.skill-category h2 {
+    border-bottom: 2px solid #007acc;
+    padding-bottom: 0.5rem;
+    color: #007acc;
+    margin-bottom: 1rem;
+}
+
+.skill-category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skill-category li {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.3rem;
+}
+
+.skill-level {
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 12px;
+    color: white;
+    text-transform: uppercase;
+}
+
+.advanced {
+    background-color: #28a745;
+}
+
+.intermediate {
+    background-color: #ffc107;
+    color: #333;
+}
+
+.beginner {
+    background-color: #dc3545;
+}
+
+/* === ANIMAÇÕES COM JAVASCRIPT === */
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s ease;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+/* === RESPONSIVIDADE === */
 @media (max-width: 768px) {
-    #contato {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    #contato, .projeto, .skills-container {
         padding: 10px;
     }
 
-    #contato h1 {
+    #contato h1, #projetos h1 {
         font-size: 24px;
     }
 
-    .contact-info h2, .social-media h2, .contact-form h2 {
+    .contact-info h2,
+    .social-media h2,
+    .contact-form h2,
+    .projeto h2 {
         font-size: 20px;
     }
 
@@ -233,17 +273,22 @@ button[type="submit"]:hover {
     }
 }
 
-/* parte do java Script */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+    }
 
-.hidden {
-    opacity: 0;
-    filter: blur(5px);
-    transform: translateX(-100%);
-    transition: all 1s;
-}
+    h2 {
+        font-size: 20px;
+    }
 
-.show {
-    opacity: 1;
-    filter: blur(0);
-    transform: translateX(0);
+    p, li {
+        font-size: 16px;
+    }
+
+    .skill-category li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
 }

@@ -1,73 +1,72 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="João Garcia João">
-    <title>Contacto - João Garcia João</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="João Garcia João" />
+  <title>Contato - João Garcia João</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
-                <li><a href="projetos.html">Projectos</a></li>
-                <li><a href="habilidades.html">Habilidades</a></li>
-                <li><a href="contato.html">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <nav aria-label="Menu principal">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="projetos.html">Projectos</a></li>
+        <li><a href="habilidades.html">Habilidades</a></li>
+        <li><a href="contato.html" aria-current="page">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main>
-        <section id="contato">
-            <h1>Entre em Contacto</h1>
-            <p>Estou sempre aberto a novas oportunidades e colaborações. Sinta-se à vontade para entrar em contacto comigo!</p>
+  <main>
+    <section id="contato">
+      <h1>Entre em Contacto</h1>
+      <p>Estou aberto a novas oportunidades, projectos e colaborações. Fique à vontade para me enviar uma mensagem!</p>
 
-            <div class="contact-info">
-                <h2>Informações de Contacto</h2>
-                <p><strong>Email:</strong> joaogarcia2021uan@gmail.com</p>
-                <p><strong>Telefone:</strong> 922064596</p>
-                <p><strong>Localização:</strong> Sapú 2, Município de Viana, Província de Luanda</p>
-            </div>
+      <section aria-label="Informações de contato">
+        <h2>Informações de Contacto</h2>
+        <p><strong>Email:</strong> <a href="mailto:joaogarciajoao96@gmail.com">joaogarciajoao96@gmail.com</a></p>
+        <p><strong>Telefone:</strong> <a href="tel:+244922064596">+244 922 064 596</a></p>
+        <p><strong>Localização:</strong> Sapú 2, Município de Viana, Província de Luanda</p>
+      </section>
 
-            <div class="social-media">
-                <h2>Redes Sociais</h2>
-                <ul>
-                    <li><a href="https://www.linkedin.com/in/joão-garcia-joão-909560225" target="_blank">LinkedIn</a></li>
-                    <li><a href="https://github.com/Johngarsjohn/" target="_blank">GitHub</a></li>
-                    <!-- outras redes sociais -->
-                </ul>
-            </div>
+      <section class="social-media" aria-label="Redes sociais">
+        <h2>Redes Sociais</h2>
+        <ul>
+          <li><a href="https://www.linkedin.com/in/joão-garcia-joão-909560225" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+          <li><a href="https://github.com/Johngarsjohn/" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        </ul>
+      </section>
 
-            <div class="contact-form">
-                <h2>Formulário de Contacto</h2>
-                <form action="#" method="POST">
-                    <div class="form-group">
-                        <label for="nome">Nome:</label>
-                        <input type="text" id="nome" name="nome" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="assunto">Assunto:</label>
-                        <input type="text" id="assunto" name="assunto" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="mensagem">Mensagem:</label>
-                        <textarea id="mensagem" name="mensagem" required></textarea>
-                    </div>
-                    <button type="submit">Enviar Mensagem</button>
-                </form>
-            </div>
-        </section>
-    </main>
+      <section class="contact-form" aria-label="Formulário de contato">
+        <h2>Formulário de Contacto</h2>
+        <form action="#" method="POST" autocomplete="on">
+          <div class="form-group">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required placeholder="Seu nome completo" aria-required="true" autocomplete="name" />
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="seuemail@exemplo.com" aria-required="true" autocomplete="email" />
+          </div>
+          <div class="form-group">
+            <label for="assunto">Assunto:</label>
+            <input type="text" id="assunto" name="assunto" required placeholder="Assunto da mensagem" aria-required="true" autocomplete="off" />
+          </div>
+          <div class="form-group">
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" required placeholder="Escreva sua mensagem aqui..." aria-required="true"></textarea>
+          </div>
+          <button type="submit">Enviar Mensagem</button>
+        </form>
+      </section>
+    </section>
+  </main>
 
-    <footer>
-        <p>&copy; 2024 João Garcia João. Todos os direitos reservados.</p>
-    </footer>
+  <footer>
+    <p>&copy; 2024 João Garcia João. Todos os direitos reservados.</p>
+  </footer>
 </body>
 </html>
